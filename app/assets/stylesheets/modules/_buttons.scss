@@ -1,0 +1,49 @@
+// -----------------------------
+// Buttons
+// -----------------------------
+
+.btn {
+    font-size: 16px;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 1;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: $site-font__weight--btn;
+    border: none;
+    @include btn-box-shadow(-3px);
+    &:hover {
+        color: inherit;
+    }
+}
+
+.btn__lg {
+    font-size: 24px;
+    padding: 20px;
+    @include btn-box-shadow(-4px);
+}
+
+.btn__primary {
+    color: $site-color__white; 
+    background-color: $site-color__secondary;
+}
+
+.btn__info {
+    color: $site-color__white;
+    background: $site-color__lightblue;
+}
+
+.btn__warning {
+    color: $site-color__white;
+    background: $site-color__yellow;
+}
+
+.btn__danger {
+    color: $site-color__white; 
+    background-color: $site-color__red;
+}
+
+
+
+

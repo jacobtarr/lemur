@@ -1,0 +1,22 @@
+// -----------------------------
+// Colors
+// -----------------------------
+
+// Site main colors
+$site-color__primary: #374859;
+$site-color__primary--lighter: lighten($site-color__primary, 25%);
+$site-color__secondary: #66CC99;
+$site-color__secondary--darker: darken($site-color__secondary, 25%);
+$site-color__secondary--darkest: darken($site-color__secondary, 30%);
+
+// Site general colors
+$site-color__white: #fff;
+$site-color__lightblue: #6BB9F0;
+$site-color__red: #FF7263;
+$site-color__yellow: #F4B350;
+
+// Site element colors
+$site-color__body: #555;
+$site-color__body--light: lighten($site-color__body, 12.5%);
+$site-color__body--lighter: lighten($site-color__body, 25%);
+$site-color__form--input: #eee;

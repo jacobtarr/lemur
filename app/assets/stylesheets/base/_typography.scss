@@ -1,0 +1,49 @@
+// -----------------------------
+// Typography
+// -----------------------------
+
+h1 { 
+	font-size: $h1__font-size; 
+	font-weight: $site-font__weight--heading;
+	font-family: $site-font__raleway;
+}
+
+h2 { 
+	font-size: $h2__font-size; 
+	font-weight: $site-font__weight--heading;
+	font-family: $site-font__raleway;
+}
+
+h3 { 
+	font-size: $h3__font-size; 
+	font-weight: $site-font__weight--heading;
+	font-family: $site-font__raleway;
+}
+
+h4 { 
+	font-size: $h4__font-size; 
+	font-weight: $site-font__weight--heading;
+	font-family: $site-font__raleway; 
+}
+
+h5 { 
+	font-size: $h5__font-size; 
+	font-weight: $site-font__weight--heading; 
+	font-family: $site-font__raleway;
+}
+
+h6 { 
+	font-size: $h6__font-size; 
+	font-weight: $site-font__weight--heading;
+	font-family: $site-font__raleway; 
+}
+
+// Paragraphs
+p { font-size: $p__font-size; }
+
+// Font Family
+body {
+	color: $site-color__body;
+	font-family: $site-font__raleway;
+	font-weight: $site-font__weight--default;
+}

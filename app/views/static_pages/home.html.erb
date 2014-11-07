@@ -1,0 +1,112 @@
+<header class="home-header">
+	<div class="home-header-content">
+		<div class="home-header-content__nav">
+			<figure class="home-header-content__nav--logo">
+				<%= link_to image_tag("global/logo.png", alt: "Lemur") %>
+				<figcaption>Lemur</figcaption>
+			</figure>
+			<nav class="home-header-content__nav--menu">
+				<ul>
+					<li><a href="">About</a></li>
+					<li><a href="">Terms</a></li>
+					<li><a href="">Support</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="home-header-content__callout">
+			<h1>Attention Grabber!</h1>
+			<p>Maecenas faucibus mollis interdum. Aenean eu leo quam. Aenean eu leo quam.</p>
+			<div class="home-header-content__callout--buttons">
+				<a href="#" class="btn btn__lg btn__primary">Sign Up</a>
+				<a href="#" class="btn btn__lg btn__primary">Sign In</a>
+			</div>
+		</div>
+		<div class="home-header-content__down-arrow">
+			<%= embedded_svg "down.svg" %>
+		</div>
+	</div>
+</header>
+<section class="home-feature home-feature__local">
+	<div class="home-feature-content">
+		<div class="home-feature-content__top">
+			<h2>Local</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci nam minima expedita, amet quis fugiat, earum. Dolor esse accusamus ducimus, eligendi neque, consequatur ipsa blanditiis totam unde odio odit.</p>
+		</div>
+		<div class="home-feature-content__bottom">
+			<div class="home-feature-content__bottom--text">
+				<h2>Secondary heading number one something</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				</ul>
+			</div>
+			<figure class="home-feature-content__bottom--image">
+				<%= embedded_svg "map.svg" %>
+			</figure>
+		</div>
+	</div>
+</section>
+<section class="home-feature home-feature__news">
+	<div class="home-feature-content">
+		<div class="home-feature-content__top">
+			<h2>News and Events</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci nam minima expedita, amet quis fugiat, earum. Dolor esse accusamus ducimus, eligendi neque, consequatur ipsa blanditiis totam unde odio odit.</p>
+		</div>
+		<div class="home-feature-content__bottom">
+			<figure class="home-feature-content__bottom--image">
+				<%= embedded_svg "news.svg" %>
+			</figure>
+			<div class="home-feature-content__bottom--text">
+				<h2>Secondary heading number one something</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="home-feature home-feature__organizations">
+	<div class="home-feature-content">
+		<div class="home-feature-content__top">
+			<h2>For Everyone</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci nam minima expedita, amet quis fugiat, earum. Dolor esse accusamus ducimus, eligendi neque, consequatur ipsa blanditiis totam unde odio odit.</p>
+		</div>
+		<div class="home-feature-content__bottom">
+			<div class="home-feature-content__bottom--text">
+				<h2>Secondary heading number one something</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				</ul>
+			</div>
+			<figure class="home-feature-content__bottom--image">
+				<%= embedded_svg "store.svg" %>
+			</figure>
+		</div>
+	</div>
+</section>
+<section class="home-newsletter">
+	<div class="home-newsletter-content">
+		<h2>Sign Up For Our Newsletter</h2>
+		<%= form_tag("/newsletter", method: "post", class: "home-newletter-content__form") do %>
+			<%= email_field_tag(:email) %>
+			<%= submit_tag("Search", class: "btn btn--lg") %>
+	    <% end %>
+	</div>
+</section>
+<footer class="site-footer">
+
+</footer>
+
+
+
+
+
+
+
+
+
