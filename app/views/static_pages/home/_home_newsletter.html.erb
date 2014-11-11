@@ -1,0 +1,10 @@
+<section class="home-newsletter">
+	<div class="home-newsletter-content">
+		<h2>Sign Up For Our Newsletter</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci nam minima expedita, amet quis fugiat, earum.</p>
+		<%= form_tag("/newsletter", method: "post", class: "home-newsletter-content__form") do %>
+			<%= email_field_tag(:email) %>
+			<%= submit_tag("Submit", class: "btn btn__lg btn__primary") %>
+	    <% end %>
+	</div>
+</section>
