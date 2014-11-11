@@ -23,6 +23,18 @@ $site-font__weight--default: 500;
 $site-font__weight--btn: 600;
 $site-font__weight--heading: 700;
 
+// Default layout config
+$site-line-height: 1.4;
+
+// Viewports for mobile devices
+$site-screen__ipad--portrait: 768px;
+$site-screen__iphone--landscape: 480px;
+$site-screen__iphone--portrait: 320px;
+$site-screen__iphone5s--landscape: 568px;
+
+// Breakpoints to fix responsiveness
+$site-breakpoint__homepage: 674px;
+
 
 
 

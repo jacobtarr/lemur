@@ -1,3 +1,4 @@
+<% provide(:title, "Home") %>
 <header class="home-header">
 	<div class="home-header-content">
 		<div class="home-header-content__nav">
@@ -6,6 +7,15 @@
 				<figcaption>Lemur</figcaption>
 			</figure>
 			<nav class="home-header-content__nav--menu">
+				<ul>
+					<li><a href="">About</a></li>
+					<li><a href="">Terms</a></li>
+					<li><a href="">Support</a></li>
+				</ul>
+			</nav>
+			<nav class="home-header-content__nav--mobile-menu">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-times"></i>
 				<ul>
 					<li><a href="">About</a></li>
 					<li><a href="">Terms</a></li>
@@ -22,11 +32,11 @@
 			</div>
 		</div>
 		<div class="home-header-content__down-arrow">
-			<%= embedded_svg "down.svg" %>
+			<a href="#home-feature__local"><%= embedded_svg "down.svg" %></a>
 		</div>
 	</div>
 </header>
-<section class="home-feature home-feature__local">
+<section class="home-feature" id="home-feature__local">
 	<div class="home-feature-content">
 		<div class="home-feature-content__top">
 			<h2>Local</h2>
@@ -47,7 +57,7 @@
 		</div>
 	</div>
 </section>
-<section class="home-feature home-feature__news">
+<section class="home-feature" id="home-feature__news">
 	<div class="home-feature-content">
 		<div class="home-feature-content__top">
 			<h2>News and Events</h2>
@@ -68,7 +78,7 @@
 		</div>
 	</div>
 </section>
-<section class="home-feature home-feature__organizations">
+<section class="home-feature" id="home-feature__organizations">
 	<div class="home-feature-content">
 		<div class="home-feature-content__top">
 			<h2>For Everyone</h2>
@@ -92,9 +102,10 @@
 <section class="home-newsletter">
 	<div class="home-newsletter-content">
 		<h2>Sign Up For Our Newsletter</h2>
-		<%= form_tag("/newsletter", method: "post", class: "home-newletter-content__form") do %>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci nam minima expedita, amet quis fugiat, earum.</p>
+		<%= form_tag("/newsletter", method: "post", class: "home-newsletter-content__form") do %>
 			<%= email_field_tag(:email) %>
-			<%= submit_tag("Search", class: "btn btn--lg") %>
+			<%= submit_tag("Submit", class: "btn btn__lg btn__primary") %>
 	    <% end %>
 	</div>
 </section>

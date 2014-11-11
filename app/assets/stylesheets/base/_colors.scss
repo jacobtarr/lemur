@@ -20,3 +20,4 @@ $site-color__body: #555;
 $site-color__body--light: lighten($site-color__body, 12.5%);
 $site-color__body--lighter: lighten($site-color__body, 25%);
 $site-color__form--input: #eee;
+$site-color__form--text: darken($site-color__form--input, 25%);

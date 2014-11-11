@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lemur</title>
-  <script src="//use.typekit.net/sia5kqm.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title><%= yield(:title) %> | Lemur</title>
+	<script src="//use.typekit.net/sia5kqm.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 

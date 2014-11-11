@@ -1,3 +1,63 @@
 // -----------------------------
 // Forms
 // -----------------------------
+
+form {
+	font-weight: 500;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 7px;
+}
+
+input, label, select {
+	font-family: $site-font__raleway;
+	font-weight: $site-font__weight--btn;
+}
+
+textarea,
+#{$all-text-inputs},
+select[multiple=multiple] {
+	@include box-sizing(border-box);
+	@include transition(border-color);
+	background-color: $site-color__form--input;
+	border-radius: 5px;
+	border: none;
+	display: block;
+	font-size: 24px;
+	color: $site-color__form--text;
+	@include btn-box-shadow(-4px, 0.3);
+	font-family: $site-font__raleway;
+	padding: 15px;
+	width: 100%;
+
+	&:hover {
+		border-color: $form-border-color-hover;
+	}
+
+  	&:focus {
+		border-color: inherit;
+		background-color: $site-color__secondary;
+		color: $site-color__white;
+		@include btn-box-shadow(-4px, 0.3);
+		outline: none;
+		@include transition(0.2s ease-in);
+	}
+}
+
+select {
+	font-size: 16px;
+	color: $site-color__white;
+	border: none;
+	background-color: $site-color__secondary;
+}
+
+
+
+
+

@@ -3,8 +3,8 @@
 // -----------------------------
 
 // Create embossed effect on buttons
-@mixin btn-box-shadow($shadow-height) {
-  box-shadow: inset 0 $shadow-height 0 rgba(0,0,0,0.3);
+@mixin btn-box-shadow($shadow-height, $shadow-transparency) {
+  box-shadow: inset 0 $shadow-height 0 rgba(0,0,0,$shadow-transparency);
 }
 
 // Reset padding and margin to 0 (use with unordered lists)
@@ -16,7 +16,6 @@
 // Set common layout properties of content in a container
 @mixin content-layout($max-width) {
 	max-width: $max-width;
-	width: 100%;
 	margin: 0 auto;
 }
 
@@ -29,6 +28,17 @@
 	padding: 10px 15px;
 	border: 3px solid $border-color;
 }
+
+// Set default style for opening paragraph
+@mixin home-section-opening-paragraph() {
+	font-family: $site-font__raleway;
+	font-size: 20px;
+	line-height: 1.4;
+	color: $site-color__body--lighter;
+	font-weight: 600;
+}
+
+
 
 
 

@@ -2,46 +2,75 @@
 // Buttons
 // -----------------------------
 
-.btn {
+.btn,
+button,
+input[type="submit"] {
     font-size: 16px;
     display: inline-block;
     white-space: nowrap;
     vertical-align: middle;
     line-height: 1;
+    outline: none;
     padding: 15px;
     border-radius: 5px;
     font-weight: $site-font__weight--btn;
     border: none;
-    @include btn-box-shadow(-3px);
+    @include btn-box-shadow(-3px, 0.3);
     &:hover {
         color: inherit;
     }
 }
 
-.btn__lg {
+.btn__lg,
+button.btn__lg,
+input[type="submit"].btn__lg {
     font-size: 24px;
     padding: 20px;
-    @include btn-box-shadow(-4px);
+    @include btn-box-shadow(-4px, 0.3);
 }
 
-.btn__primary {
+.btn__primary,
+button.btn__primary,
+input[type="submit"].btn__primary {
     color: $site-color__white; 
     background-color: $site-color__secondary;
+    &:hover {
+        @include transition(0.2s ease-in);
+        background-color: darken($site-color__secondary, 10%);
+    }
 }
 
-.btn__info {
+.btn__info,
+button.btn__info,
+input[type="submit"].btn__info {
     color: $site-color__white;
     background: $site-color__lightblue;
+    &:hover {
+        @include transition(0.2s ease-in);
+        background-color: darken($site-color__lightblue, 10%);
+    }
 }
 
-.btn__warning {
+.btn__warning,
+button.btn__warning,
+input[type="submit"].btn__warning {
     color: $site-color__white;
     background: $site-color__yellow;
+    &:hover {
+        @include transition(0.2s ease-in);
+        background-color: darken($site-color__yellow, 10%);
+    }
 }
 
-.btn__danger {
+.btn__danger,
+button.btn__danger,
+input[type="submit"].btn__danger {
     color: $site-color__white; 
     background-color: $site-color__red;
+    &:hover {
+        @include transition(0.2s ease-in);
+        background-color: darken($site-color__red, 10%);
+    }
 }
 
 
