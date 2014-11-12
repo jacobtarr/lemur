@@ -5,6 +5,7 @@ group :development do
 end
 
 gem 'rails', '4.0.8'
+gem 'bcrypt', '3.1.7'
 gem 'sqlite3'
 gem 'sass-rails'
 gem 'font-awesome-rails'
