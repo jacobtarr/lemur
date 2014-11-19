@@ -1,0 +1,41 @@
+<header class="home-header">
+	<div class="home-header-content">
+		<div class="home-header-content__nav">
+			<figure class="home-header-content__nav--logo">
+				<%= link_to image_tag("global/logo.png", alt: "Lemur") %>
+				<figcaption><%= link_to "Lemur",   root_path %></figcaption>
+			</figure>
+			<nav class="home-header-content__nav--menu">
+				<ul>
+					<li><%= link_to "About",   about_path %></li>
+					<li><%= link_to "Terms",   terms_path %></li>
+					<li><%= link_to "Help",   help_path %></li>
+					<li><%= link_to "Sign In", login_path %></li>
+				</ul>
+			</nav>
+			<nav class="home-header-content__nav--mobile-menu">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-times"></i>
+				<ul>
+					<li><%= link_to "About",   about_path %></li>
+					<li><%= link_to "Terms",   terms_path %></li>
+					<li><%= link_to "Help",   help_path %></li>
+					<li><%= link_to "Sign In", login_path %></li>
+				</ul>
+			</nav>
+		</div>
+		<% if current_page?(root_path) %>
+		<div class="home-header-content__callout">
+			<h1>Get the word out!</h1>
+			<p>Write about what's happening around you, post about upcoming events and more with Lemur.</p>
+			<div class="home-header-content__callout--buttons">
+				<%= link_to "Sign Up", signup_path, class: "btn btn__lg btn__primary" %>
+				<%= link_to "Sign In", login_path, class: "btn btn__lg btn__primary" %>
+			</div>
+		</div>
+		<div class="home-header-content__down-arrow">
+			<a href="#home-feature__local"><%= embedded_svg "down.svg" %></a>
+		</div>
+		<% end %>
+	</div>
+</header>

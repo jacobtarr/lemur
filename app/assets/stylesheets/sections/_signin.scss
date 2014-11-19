@@ -1,0 +1,44 @@
+// -----------------------------
+// Signin
+// -----------------------------
+
+.signin-form {
+	@include content-layout(640px);
+	margin-top: 50px;
+}
+
+.signin-form__heading {
+	@include session-form-heading();
+}
+
+.signin-form__form {
+	@include session-form-elements();
+	margin: 40px 0 30px 0;
+	padding-bottom: 40px;
+	border-bottom: 3px solid #ddd;
+}
+
+.signin-form__form--group {
+	@extend %form-group;
+}
+
+.signin-form__help-links {
+	font-size: 20px;
+	color: #aaa;
+	font-weight: 700;
+	li {
+		margin-bottom: 7px;
+	}
+	.fa {
+		width: 35px;
+		&.fa-lock {
+			color: $site-color__red;
+		}
+		&.fa-question-circle {
+			color: $site-color__lightblue;
+		}
+	}
+}
+
+
+

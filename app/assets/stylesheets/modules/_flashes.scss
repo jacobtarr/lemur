@@ -1,0 +1,42 @@
+// -----------------------------
+// Flashes
+// -----------------------------
+
+#error-explanation {
+	font-size: 18px;
+	margin: 20px 0;
+	ul {
+		padding: 0 0 0 30px;
+	}
+	li {
+		margin: 5px 0;
+		color: $site-color__red;
+		font-weight: 700;
+		.fa {
+			margin-right: 10px;
+		}
+	}
+}
+
+.alert {
+	padding: 15px 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	font-weight: 700;
+	margin: 20px 0;
+}
+
+.alert__danger {
+	background: $site-color__red;
+	color: lighten($site-color__red, 35%);
+}
+
+.alert__success {
+	background: $site-color__secondary;
+	color: lighten($site-color__secondary, 35%);
+}
+
+
+
+
+

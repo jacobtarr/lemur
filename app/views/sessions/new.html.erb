@@ -1,0 +1,28 @@
+<% provide(:title, "Sign In") %>
+<%= render 'layouts/header_secondary' %>
+<main class="site-main">
+	<section class="signin-form">
+		<div class="signin-form__heading">
+			<h2>Sign In</h2>
+		</div>
+		<%= form_for(:session, url: login_path, html: { class: "signin-form__form" } ) do |f| %>
+			<div class="signin-form__form--group">
+				<%= f.label :email %>
+				<%= f.text_field :email, :placeholder => "name@example.com" %>
+			</div>
+			<div class="signin-form__form--group">
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+			</div>
+			<%= f.submit "Log in", class: "btn btn__lg btn__primary" %>
+	    <% end %>
+		<ul class="signin-form__help-links">
+			<li>
+				<i class="fa fa-lock"></i>Forget your password? We can <%= link_to "help!", '#' %>
+			</li>
+			<li>
+				<i class="fa fa-question-circle"></i>Don't have an account? <%= link_to "Sign up!", signup_path %>
+			</li>
+		</ul>
+	</section>
+</main>

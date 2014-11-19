@@ -1,0 +1,47 @@
+// -----------------------------
+// Signup
+// -----------------------------
+
+.signup-form {
+	@include content-layout(640px);
+	margin-top: 50px;
+}
+
+.signup-form__heading {
+	@include session-form-heading();
+	span {
+		display: block;
+		color: $site-color__secondary;
+		margin-top: 10px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+
+.signup-form__form {
+	@include session-form-elements();
+	@include secondary-form-heading();
+	#account-vitals {
+		margin-top: 40px;
+	}
+}
+
+.signup-form__form--group {
+	@extend %form-group;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
