@@ -38,6 +38,50 @@
 	font-weight: 600;
 }
 
+// Default session form heading
+@mixin session-form-heading() {
+	text-align: center;
+	h2 {
+		color: $site-color__primary--lighter;
+		@include home-section-heading(22px, $site-color__primary--lighter);
+	}
+}
+
+// Common styles that are used by sign up and sign in forms
+@mixin session-form-elements() {
+	margin-top: 30px;
+	.btn {
+		margin-top: 20px;
+		width: 100%;
+		font-weight: 700;
+	}
+	label {
+		font-size: 20px;
+		color: $site-color__body--lighter;
+	}
+	p {
+		color: $site-color__body--lighter;
+		font-weight: 700;
+		font-size: 20px;
+	}
+	input {
+		height: 60px;
+	}
+}
+
+// Default secondary form heading
+@mixin secondary-form-heading() {
+	h3 {
+		font-size: 24px;
+		border-bottom: 4px solid $site-color__body;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+		.fa {
+			margin-right: 10px;
+		}
+	}
+}
+
 
 
 

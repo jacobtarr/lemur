@@ -1,21 +1,17 @@
+//= require_self
 
 // Import third-party plugin stylesheets
 @import 'vendor/normalize';
 @import 'vendor/bourbon/bourbon';
 @import 'vendor/base/base';
-@import 'vendor/slicknav';
+@import 'nprogress';
 @import 'font-awesome';
 
 // Import base stylesheet (includes mixins and variables)
-@import 'base/config';
-@import 'base/colors';
-@import 'base/typography';
-@import 'base/mixins';
+@import 'base/*';
 
 // Import modules (buttons, form elements, etc.)
-@import 'modules/layout';
-@import 'modules/buttons';
-@import 'modules/forms';
+@import 'modules/*';
 
 // Import specific sections of app
-@import 'sections/homepage';
+@import 'sections/*';

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title><%= yield(:title) %> | Lemur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="//use.typekit.net/sia5kqm.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -10,9 +11,10 @@
     <%= render 'layouts/shim' %>
 </head>
 <body>
-
+	
 <%= yield %>
 
-<%= render 'layouts/site_footer' %>
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
 </body>
 </html>

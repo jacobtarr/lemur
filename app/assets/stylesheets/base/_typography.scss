@@ -41,9 +41,24 @@ h6 {
 // Paragraphs
 p { font-size: $p__font-size; }
 
+// Links
+a {
+	color: $site-color__secondary;
+	text-decoration: none;
+	&:hover {
+		color: $site-color__primary--lighter;
+		@include transition(0.2s ease-in);
+	}
+}
+
 // Font Family
 body {
 	color: $site-color__body;
 	font-family: $site-font__raleway;
 	font-weight: $site-font__weight--default;
 }
+
+
+
+
+
