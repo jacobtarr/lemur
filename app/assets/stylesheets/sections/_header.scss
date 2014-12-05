@@ -1,0 +1,146 @@
+// -----------------------------
+// Header
+// -----------------------------
+
+.site-header {
+	background-color: $site-color__primary;
+	color: $site-color__white;
+	figure {
+		margin: 0;
+	}
+}
+
+.site-header-content {
+	@include content-layout($site-width__main);
+	padding: 20px 0;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+.site-header-content__nav {
+	@include display(flex);
+	@include align-items(center);
+}
+
+.site-header-content__nav--logo {
+	@include flex(1);
+	@include display(flex);
+	@include align-items(center);
+	img {
+		display: inline-block;
+		@media (max-width: 674px) {
+			max-width: 50px;
+		}
+	}
+	figcaption {
+		display: inline-block;
+		font-size: 28px;
+		margin-left: 20px;
+		text-transform: uppercase;
+		font-weight: 700;
+		a {
+			color: $site-color__secondary;
+			&:hover {
+				color: $site-color__primary--lighter;
+				@include transition(0.2s ease-in);
+			}
+		}
+		@media (max-width: $site-breakpoint__homepage) {
+			font-size: 20px;
+		}
+	}
+}
+
+.site-header-content__callout {
+	text-align: center;
+	margin-top: 100px;
+	h1 {
+		font-size: 72px;
+		margin: 0;
+		@media (max-width: $site-screen__ipad--portrait) {
+			font-size: 48px;
+		}
+		@media (max-width: $site-screen__iphone5s--landscape) {
+			font-size: 32px;
+		}
+		@media (max-width: $site-screen__iphone--landscape) {
+			font-size: 28px;
+		}
+	}
+	p {
+		margin: 15px 0 0 0;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 1.4;
+		@media (max-width: $site-screen__ipad--portrait) {
+			font-size: 28px;
+		}
+		@media (max-width: $site-screen__iphone5s--landscape) {
+			font-size: 24px;
+		}
+		@media (max-width: $site-screen__iphone--landscape) {
+			font-size: 18px;
+		}
+	}
+	@media (max-width: $site-screen__iphone5s--landscape) {
+		margin-top: 50px;
+	}
+}
+
+.site-header-content__callout--buttons {
+	margin-top: 50px;
+	.btn {
+		padding: 20px 40px;
+		font-size: 28px;
+		&:first-child {
+			margin-right: 30px;
+			@media (max-width: $site-breakpoint__homepage) {
+				margin-right: 10px;
+			}
+		}
+		&:last-child {
+			margin-left: 30px;
+			@media (max-width: $site-breakpoint__homepage) {
+				margin-left: 10px;
+			}
+		}
+		@media (max-width: $site-breakpoint__homepage) {
+			padding: 15px 30px;
+			font-size: 20px;
+		}
+		@media (max-width: $site-screen__iphone5s--landscape) {
+			padding: 13px 26px;
+			font-size: 16px;
+		}
+	}
+	@media (max-width: $site-breakpoint__homepage) {
+		margin-top: 30px;
+	}
+}
+
+.site-header-content__down-arrow {
+	text-align: center;
+	margin: 70px 0 20px 0;
+	svg {
+		@include size(70px);
+		vertical-align: middle;
+		path {
+			fill: $site-color__secondary;
+		}
+		@media (max-width: $site-breakpoint__homepage) {
+			@include size(50px);
+		}
+	}
+	a {
+		&:hover {
+			path {
+				fill: $site-color__white;
+				@include transition(0.2s ease-in);
+			}
+		}
+	}
+	@media (max-width: $site-breakpoint__homepage) {
+		margin: 40px 0 10px 0;
+	}
+}
+

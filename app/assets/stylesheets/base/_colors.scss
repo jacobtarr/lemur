@@ -8,6 +8,7 @@ $site-color__primary--lighter: lighten($site-color__primary, 25%);
 $site-color__secondary: #66CC99;
 $site-color__secondary--darker: darken($site-color__secondary, 25%);
 $site-color__secondary--darkest: darken($site-color__secondary, 30%);
+$site-color__secondary--dashboard-bg: lighten($site-color__secondary, 16%);
 
 // Site general colors
 $site-color__white: #fff;

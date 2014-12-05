@@ -1,9 +1,9 @@
-//= require_self
-
 // Import third-party plugin stylesheets
+@import 'jquery.ui.core';
 @import 'vendor/normalize';
 @import 'vendor/bourbon/bourbon';
 @import 'vendor/base/base';
+@import 'vendor/selectboxit';
 @import 'nprogress';
 @import 'font-awesome';
 

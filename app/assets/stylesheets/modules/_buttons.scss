@@ -5,9 +5,11 @@
 .btn,
 button,
 input[type="submit"] {
+    @include box-sizing(border-box);
     font-size: 16px;
     display: inline-block;
     white-space: nowrap;
+    text-align: center;
     vertical-align: middle;
     line-height: 1;
     outline: none;
@@ -17,7 +19,7 @@ input[type="submit"] {
     border: none;
     @include btn-box-shadow(-3px, 0.3);
     &:hover {
-        color: inherit;
+        color: $site-color__white;
     }
 }
 

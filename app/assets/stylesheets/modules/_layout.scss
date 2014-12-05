@@ -4,9 +4,21 @@
 
 body {
 	-webkit-font-smoothing: antialiased;
+	@include box-sizing(border-box);
 }
 
 .site-main {
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.site-main--homepage {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.site-main--dashboard {
+	@extend .site-main;
+	padding-top: 20px;
+	background-color: $site-color__secondary--dashboard-bg;
 }

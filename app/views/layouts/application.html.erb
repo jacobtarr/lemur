@@ -11,9 +11,13 @@
     <%= render 'layouts/shim' %>
 </head>
 <body>
-	
-<%= yield %>
-
+<%= render 'layouts/header' %>
+	<main class="site-main<%= yield(:main_class_modifier) %>">
+		<% flash.each do |message_type, message| %>
+			<div class="alert alert__<%= message_type %>"><%= message %></div>
+		<% end %>	
+		<%= yield %>
+	</main>
 <%= render 'layouts/footer' %>
 <%= debug(params) if Rails.env.development? %>
 </body>

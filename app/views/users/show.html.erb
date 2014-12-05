@@ -1,8 +1,12 @@
 <% provide(:title, @user.name) %>
-<% flash.each do |message_type, message| %>
-	<div class="alert alert__<%= message_type %>"><%= message %></div>
-<% end %>
-<h1>
-	<%= gravatar_for @user %>
-	<%= @user.name %>
-</h1>
+<% provide(:main_class_modifier, "--dashboard") %>
+<div class="dashboard">
+	<%= render 'shared/dashboard_sidebar' %>
+	<%= render 'shared/dashboard_content' %>
+</div>
+
+
+
+
+
+

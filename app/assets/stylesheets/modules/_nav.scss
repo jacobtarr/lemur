@@ -1,0 +1,135 @@
+// -----------------------------
+// Header -- Navigation
+// -----------------------------
+
+#toggle { 
+	display: none;
+	&:checked {
+		+ .site-header-content__nav--menu {
+			ul {
+				@media only screen and (max-width: $site-screen__ipad--portrait) {
+					display: block;
+					opacity: 1;
+					@include transition(opacity 0.2s ease-in);
+				}
+			}
+			.toggle:after {
+				@media only screen and (max-width: $site-screen__ipad--portrait) {
+					content: attr(data-close);
+					font-family: "FontAwesome";
+				}
+			}
+		}
+	}	
+}
+
+.toggle {
+	display: none;
+	margin-bottom: 0;
+	@media only screen and (max-width: $site-screen__ipad--portrait) {
+		display: block; 
+		position: relative; 
+		cursor: pointer;
+		-webkit-touch-callout: none; 
+		@include user-select(none);
+		&:hover {
+			&::after {
+				@include nav-toggle($site-color__secondary);
+				@include transition(0.2s ease-in);
+			}
+		}
+		&::after {
+			@include nav-toggle($site-color__white);
+		}
+	}
+}
+
+.site-header-content__nav--menu {
+	position: relative;
+	.gravatar {
+		border-radius: 50%;
+		width: 60%;
+		vertical-align: middle;
+	}
+	ul {
+		@include flex(2);
+		text-align: right;
+		@media (min-width: $site-screen__ipad--portrait + 1) {
+			li {
+				vertical-align: middle;
+				display: inline-block;
+				padding-right: 45px;
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+		a {
+			color: $site-color__secondary;
+			font-size: 20px;
+			font-weight: 700;
+			position: relative;
+			display: inline-block;
+			@include transition(transform 0.2s);
+			@media (min-width: $site-screen__ipad--portrait + 1) {
+				&:hover {
+					@include transform(scale(0.8333));
+					&::before {
+						opacity: 1;
+						@include transform(scale(1.2));
+					}
+				}
+				&::before {
+					@include position(absolute, -2px null null -7px);
+					@include box-sizing(content-box);
+					padding: 0 5px;
+					@include size(100% 100%);
+					border: 3px solid $site-color__secondary;
+					content: '';
+					opacity: 0;
+					@include transition(opacity 0.2s, transform 0.2s);
+					@include transform(scale(0.8333));
+				}
+			}
+		}
+		@media only screen and (max-width: $site-screen__ipad--portrait) {
+			background-color: $site-color__secondary;
+			padding: 8px 15px 8px 15px;
+			margin: 10px 0 0 0;
+			opacity: 0;
+			min-width: 130px;
+			border-radius: 5px;
+			position: absolute; 
+			right: 0;
+			li {
+				display: block; 
+				width: 100%; 
+				margin: 0; 
+			}
+			a {
+				color: $site-color__white;
+				display: block; 
+				width: 100%;
+				font-size: 18px;
+				padding: 2px 0;
+				text-decoration: none;
+				@include transition(0.2s ease-in);
+				@include box-sizing(border-box);
+				&:hover {
+					color: $site-color__secondary--darker;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

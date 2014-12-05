@@ -1,60 +1,57 @@
 <% provide(:title, "Sign Up") %>
-<%= render 'layouts/header_secondary' %>
-<main class="site-main">
-	<section class="signup-form">
-		<div class="signup-form__heading">
-			<h2>Sign Up</h2>
-			<span>It only takes a few moments!</span>
-		</div>
-		<%= form_for @user, html: { class: "signup-form__form" } do |f| %>
-		<%= render 'shared/error_messages' %>
-			<div id="account-info">
-				<h3><i class="fa fa-info-circle"></i>Account Info</h3>
-				<div class="signup-form__form--group">
-					<div class="input-group">
-						<%= f.label :name %>
-						<%= f.text_field :name, :placeholder => "Full Name" %>
-					</div>
-					<div class="input-group">
+<section class="signup-form">
+	<div class="signup-form__heading">
+		<h2>Sign Up</h2>
+		<span>It only takes a few moments!</span>
+	</div>
+	<%= form_for @user, html: { class: "signup-form__form" } do |f| %>
+	<%= render 'shared/error_messages' %>
+		<div id="account-info">
+			<h3><i class="fa fa-info-circle"></i>Account Info</h3>
+			<div class="signup-form__form--group">
+				<div class="input-group">
+					<%= f.label :name %>
+					<%= f.text_field :name, :placeholder => "Full Name" %>
+				</div>
+				<div class="input-group">
 					<%= f.label :username %>
 					<%= f.text_field :username %>
-					</div>
-				</div>
-				<div class="signup-form__form--group">
-					<%= f.label :email %>
-					<%= f.text_field :email, :placeholder => "name@example.com" %>
-				</div>
-				<div class="signup-form__form--group">
-					<div class="input-group">
-						<%= f.label :password %>
-						<%= f.password_field :password %>
-					</div>
-					<div class="input-group">
-						<%= f.label :password_confirmation, "Confirm Password" %>
-						<%= f.password_field :password_confirmation %>
-					</div>
 				</div>
 			</div>
-			<div id="account-vitals">
-				<h3><i class="fa fa-list-alt"></i>Vitals</h3>
-				<div class="signup-form__form--group">
-					<%= f.label :user_location, "Where are you?" %>
-					<%= f.text_field :user_location %>
+			<div class="signup-form__form--group">
+				<%= f.label :email %>
+				<%= f.text_field :email, :placeholder => "name@example.com" %>
+			</div>
+			<div class="signup-form__form--group">
+				<div class="input-group">
+					<%= f.label :password %>
+					<%= f.password_field :password %>
 				</div>
-				<div class="signup-form__form--group">
-					<%= f.label :about_me, "About Me" %>
-					<%= f.text_area :about_me, size: "3x3" %>
-				</div>
-				<div class="signup-form__form--group">
-					<%= f.label :website, "Your Website" %>
-					<%= f.text_field :website %>
+				<div class="input-group">
+					<%= f.label :password_confirmation, "Confirm Password" %>
+					<%= f.password_field :password_confirmation %>
 				</div>
 			</div>
-			<p>By clicking "Create Account," you agree to the <%= link_to "terms", terms_path, :target => '_blank' %> of Lemur.</p>
-			<%= f.submit "Create Account", class: "btn btn__lg btn__primary" %>
-	    <% end %>
-	</section>
-</main>
+		</div>
+		<div id="account-vitals">
+			<h3><i class="fa fa-list-alt"></i>Vitals</h3>
+			<div class="signup-form__form--group">
+				<%= f.label :user_location, "Where are you?" %>
+				<%= f.text_field :user_location %>
+			</div>
+			<div class="signup-form__form--group">
+				<%= f.label :about_me, "About Me" %>
+				<%= f.text_area :about_me, size: "3x3" %>
+			</div>
+			<div class="signup-form__form--group">
+				<%= f.label :website, "Your Website" %>
+				<%= f.text_field :website %>
+			</div>
+		</div>
+		<p>By clicking "Create Account," you agree to the <%= link_to "terms", terms_path, :target => '_blank' %> of Lemur.</p>
+		<%= f.submit "Create Account", class: "btn btn__lg btn__primary" %>
+    <% end %>
+</section>
 
 
 

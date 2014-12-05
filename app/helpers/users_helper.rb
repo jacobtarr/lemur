@@ -6,4 +6,10 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
+
+  # Prepend "@" to username
+  def at_username(user)
+  	full_username = "@" + @user.username
+  end
+
 end

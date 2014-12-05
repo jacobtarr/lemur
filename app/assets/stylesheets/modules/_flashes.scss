@@ -24,6 +24,11 @@
 	border-radius: 5px;
 	font-weight: 700;
 	margin: 20px 0;
+	.site-main--dashboard & {
+		margin: 0 auto;
+		@include box-sizing(border-box);
+		max-width: 1000px;
+	}
 }
 
 .alert__danger {

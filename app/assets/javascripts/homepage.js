@@ -1,5 +1,5 @@
 // -----------------------------
-// homepage.js
+// Homepage
 // -----------------------------
 
 // Smoothly scroll to id element

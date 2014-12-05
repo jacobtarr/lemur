@@ -7,18 +7,19 @@ form {
 }
 
 %form-group {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	@include clearfix();
 }
 
 .input-group {
-	display: inline-block;
+	float: left;
 	width: 48%;
 	&:first-child {
-		margin-right: 3%;
+		margin-right: 4%;
 	}
 }
 
-input, input[type], label, select {
+input, input[type], label, select, textarea {
 	font-family: $site-font__raleway;
 	font-weight: $site-font__weight--btn;
 	margin: 0;
@@ -39,11 +40,12 @@ select[multiple=multiple] {
 	border-radius: 5px;
 	border: none;
 	display: block;
-	font-size: 20px;
+	font-size: 18px;
+	margin-bottom: 0;
 	color: $site-color__form--text;
 	@include btn-box-shadow(-4px, 0.3);
 	font-family: $site-font__raleway;
-	padding: 15px;
+	padding: 13px;
 	width: 100%;
 	&:hover {
 		border-color: $form-border-color-hover;
@@ -76,12 +78,134 @@ select[multiple=multiple] {
 	}
 }
 
-select {
-	font-size: 16px;
+input[type="checkbox"] {
+	display: none;
+	+ .label-text::before {
+		content: '\f096';
+		cursor: pointer;
+		font-family: "FontAwesome";
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		width: 15px;
+		vertical-align: middle;
+		font-size: 24px;
+		line-height: 1;
+		margin-right: 20px;
+		display: inline-block;
+	}
+	&:checked {
+		+ .label-text::before {
+			content: '\f14a';
+			color: $site-color__secondary;
+			@include animation(checkbox-tick 0.2s ease-in);
+		}
+	}
+	&:disabled + .label-text {
+		color: $site-color__body--lighter;
+		&::before {
+			content: '\f0c8';
+			color: #ccc;
+		}
+	}
+}
+
+// -----------------------------
+// Select Box It Overrides
+// -----------------------------
+
+.selectboxit-btn {
+	background-color: $site-color__lightblue;
+	background-image: none;
 	color: $site-color__white;
 	border: none;
-	background-color: $site-color__secondary;
+	width: 100%;
 }
+
+.selectboxit-container {
+	width: 100%;
+	.fa {
+		font-family: FontAwesome !important;
+	}
+}
+
+.selectboxit-btn.selectboxit-enabled {
+	&:hover, &:focus {
+		color: $site-color__white;
+		background-color: darken($site-color__lightblue, 10%);
+		@include transition(0.2s ease-in);
+	}
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+	background-color: $site-color__lightblue;
+	background-image: none;
+}
+
+.selectboxit-list {
+	border: none;
+	background-color: darken($site-color__lightblue, 30%);
+	width: 100%;
+	min-width: 100% !important;
+	max-height: inherit !important;
+}
+
+.selectboxit-container .selectboxit-options {
+	border-radius: 5px;
+}
+
+.selectboxit-option .selectboxit-option-anchor {
+	padding: 7px;
+	color: $site-color__white;
+}
+
+.selectboxit-option-first {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.selectboxit-option-last {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.selectboxit-container span, .selectboxit-container .selectboxit-options a {
+	padding-left: 5px;
+}
+
+.selectboxit-container .selectboxit {
+	padding: 10px 0;
+	border-radius: 5px;
+	width: 100% !important;
+	max-height: inherit !important;
+}
+
+.selectboxit-container * {
+	font-size: 18px;
+	font-family: $site-font__raleway !important;
+	font-weight: 600;
+}
+
+.selectboxit-arrow-container {
+	right: 10px;
+	text-align: center;
+}
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+	top: 30%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

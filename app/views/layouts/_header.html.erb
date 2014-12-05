@@ -1,41 +1,39 @@
-<header class="home-header">
-	<div class="home-header-content">
-		<div class="home-header-content__nav">
-			<figure class="home-header-content__nav--logo">
+<header class="site-header">
+	<div class="site-header-content">
+		<div class="site-header-content__nav">
+			<figure class="site-header-content__nav--logo">
 				<%= link_to image_tag("global/logo.png", alt: "Lemur") %>
 				<figcaption><%= link_to "Lemur",   root_path %></figcaption>
 			</figure>
-			<nav class="home-header-content__nav--menu">
+			<input type="checkbox" id="toggle" />
+			<nav class="site-header-content__nav--menu">
+				<label for="toggle" class="toggle" data-open="&#xf0c9;" data-close="&#xf00d;" onclick></label>
 				<ul>
-					<li><%= link_to "About",   about_path %></li>
-					<li><%= link_to "Terms",   terms_path %></li>
-					<li><%= link_to "Help",   help_path %></li>
-					<li><%= link_to "Sign In", login_path %></li>
-				</ul>
-			</nav>
-			<nav class="home-header-content__nav--mobile-menu">
-				<i class="fa fa-bars"></i>
-				<i class="fa fa-times"></i>
-				<ul>
-					<li><%= link_to "About",   about_path %></li>
-					<li><%= link_to "Terms",   terms_path %></li>
-					<li><%= link_to "Help",   help_path %></li>
-					<li><%= link_to "Sign In", login_path %></li>
+					<% if logged_in? %>
+						<li><%= link_to "Users", users_path %></li>
+						<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+					<% else %>
+						<li><%= link_to "About",   about_path %></li>
+						<li><%= link_to "Terms",   terms_path %></li>
+						<li><%= link_to "Help",   help_path %></li>
+						<li><%= link_to "Sign In", login_path %></li>
+					<% end %>
 				</ul>
 			</nav>
 		</div>
-		<% if current_page?(root_path) %>
-		<div class="home-header-content__callout">
-			<h1>Get the word out!</h1>
-			<p>Write about what's happening around you, post about upcoming events and more with Lemur.</p>
-			<div class="home-header-content__callout--buttons">
-				<%= link_to "Sign Up", signup_path, class: "btn btn__lg btn__primary" %>
-				<%= link_to "Sign In", login_path, class: "btn btn__lg btn__primary" %>
+		<% if current_page?(root_path) && !logged_in? %>
+			<div class="site-header-content__callout">
+				<h1>Get the word out!</h1>
+				<p>Write about what's happening around you, post about upcoming events and more with Lemur.</p>
+				<div class="site-header-content__callout--buttons">
+					<%= link_to "Sign Up", signup_path, class: "btn btn__lg btn__primary" %>
+					<%= link_to "Sign In", login_path, class: "btn btn__lg btn__primary" %>
+				</div>
 			</div>
-		</div>
-		<div class="home-header-content__down-arrow">
-			<a href="#home-feature__local"><%= embedded_svg "down.svg" %></a>
-		</div>
+			<div class="site-header-content__down-arrow">
+				<a href="#home-feature__local"><%= embedded_svg "down.svg" %></a>
+			</div>
 		<% end %>
 	</div>
 </header>
+

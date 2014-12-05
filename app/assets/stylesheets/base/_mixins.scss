@@ -56,13 +56,13 @@
 		font-weight: 700;
 	}
 	label {
-		font-size: 20px;
+		font-size: 18px;
 		color: $site-color__body--lighter;
 	}
 	p {
 		color: $site-color__body--lighter;
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 18px;
 	}
 	input {
 		height: 60px;
@@ -72,14 +72,25 @@
 // Default secondary form heading
 @mixin secondary-form-heading() {
 	h3 {
-		font-size: 24px;
+		font-size: 22px;
 		border-bottom: 4px solid $site-color__body;
 		padding-bottom: 10px;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		.fa {
 			margin-right: 10px;
 		}
 	}
+}
+
+// Toggle content
+@mixin nav-toggle($color) {
+	font-size: 24px;
+	content: attr(data-open);
+	font-family: "FontAwesome";
+	color: $color;
+	display: block;
+	text-align: center;
+	@include box-sizing(border-box);
 }
 
 
