@@ -93,9 +93,27 @@
 	@include box-sizing(border-box);
 }
 
-
-
-
+// Styles for pagination arrows in users page
+@mixin pagination-arrows($fa-unicode, $margin) {
+	padding: 0 !important;
+	&.disabled {
+		color: lighten($site-color__body--lighter, 15%);
+		&:hover {
+			color: lighten($site-color__body--lighter, 15%);
+		}
+	}
+	&:hover {
+		border: none;
+		color: $site-color__secondary--darker;
+	}
+	&::before {
+		font-size: 28px;
+		content: '#{$fa-unicode}';
+		font-family: "FontAwesome";
+		vertical-align: middle;
+		margin: $margin;
+	}
+}
 
 
 

@@ -2,7 +2,10 @@
 <% provide(:main_class_modifier, "--dashboard") %>
 <div class="dashboard">
 	<%= render 'shared/dashboard_sidebar' %>
-	<%= render 'shared/dashboard_content' %>
+	<section class="dashboard__content">
+		<%= render 'shared/dashboard_post_section' %>
+		<%= render 'shared/dashboard_feed_section' %>
+	</section>
 </div>
 
 

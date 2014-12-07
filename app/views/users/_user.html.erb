@@ -1,0 +1,15 @@
+<li class="users-list__user">
+	<%= gravatar_for user, size: 80 %>
+	<div class="users-list__user--content">
+		<header>
+			<%= link_to user.name, user %>
+			<span class="username"><%= at_username user %></span>
+			<% if current_user.admin? && !current_user?(user) %>
+		    <span class="delete-user"><%= link_to "delete", user, method: :delete,
+		                                  data: { confirm: "Are you sure?" } %>
+		    </span>
+		 	<% end %>
+		</header>
+		<p><%= user.about_me %></p>
+	</div>
+</li>
