@@ -1,0 +1,21 @@
+<% provide(:title, 'Reset Password') %>
+<section class="reset-password-section">
+	<div class="reset-password-section__heading">
+		<h2>Reset Password</h2>
+	</div>
+	<%= form_for(@user, url: password_reset_path(params[:id]), html: { class: "reset-password-section__form" } ) do |f| %>
+		<%= render 'shared/error_messages' %>
+		<%= hidden_field_tag :email, @user.email %>
+		<div class="reset-password-section__form--group">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+		<div class="reset-password-section__form--group">
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.password_field :password_confirmation %>
+		</div>
+		<%= f.submit "Update Password", class: "btn btn__primary" %>
+	<% end %>
+</section>
+
+

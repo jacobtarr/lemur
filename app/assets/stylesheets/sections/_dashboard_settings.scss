@@ -1,0 +1,52 @@
+// -----------------------------
+// Dashboard -- Account Settings
+// -----------------------------
+
+.settings-form {
+	@include secondary-form-heading();
+	h3 {
+		span {
+			font-size: 16px;
+		}
+	}
+	.btn__submit {
+		margin-top: 10px;
+		width: 100%;
+	}
+	#error-explanation,
+	.alert {
+		margin-top: 0;
+	}
+}
+
+.settings-form__section {
+	margin-top: 40px;
+	&.first {
+		margin-top: 0;
+	}
+}
+
+.settings-form__section--group {
+	@extend %form-group;
+	.input-group {
+		&.where {
+			width: 100%;
+			.input-group {
+				float: none;
+				width: 90%;
+				margin-right: 4%;
+			}
+		}
+	}
+	label {
+		color: $site-color__body--light;
+		font-size: 18px;
+		display: block;
+		@include clearfix();
+	}
+	.character-count {
+		float: right;
+	}
+}
+
+

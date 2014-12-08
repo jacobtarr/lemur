@@ -1,0 +1,26 @@
+// -----------------------------
+// Dashboard -- Components
+// -----------------------------
+
+.pagelet {
+	background: $site-color__white;
+	border-radius: 5px;
+}
+
+.pagelet__header {
+	background: $site-color__primary;
+	color: $site-color__white;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	.fa {
+		margin-right: 10px;
+	}
+}
+
+.pagelet__body {
+	padding: 20px;
+}

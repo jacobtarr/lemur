@@ -1,0 +1,100 @@
+// -----------------------------
+// Dashboard -- Browse Users
+// -----------------------------
+
+.pagination {
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	a, em {
+		padding: 5px 10px;
+	}
+	a {
+		&:hover {
+			color: $site-color__secondary;
+			border-bottom: 3px solid $site-color__secondary;
+			@include transition(0.2s ease-in);
+		}
+	}
+	em {
+		border-bottom: 3px solid $site-color__secondary;
+	}
+	.previous_page {
+		@include pagination-arrows(\f0a8, 0 10px 0 0);
+	}
+	.next_page {
+		@include pagination-arrows(\f0a9, 0 0 0 10px);
+	}
+	.pagelet__body & {
+		&:first-child {
+			margin-bottom: 15px;
+		}
+		&:last-child {
+			margin-top: 15px;
+		}
+	}
+}
+
+.users-list {
+	.gravatar {
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 5px;
+		margin-right: -4px;
+	}
+}
+
+.users-list__user {
+	border-bottom: 1px solid #e7e7e7;
+	padding: 15px 20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	.users-list & {
+		&:first-child {
+			border-top: 1px solid #e7e7e7;
+		}
+	}
+}
+
+.users-list__user--content {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	max-width: 530px;
+	header {
+		font-size: 18px;
+		line-height: 1;
+		a {
+			color: $site-color__body;
+			font-weight: 600;
+			&:hover {
+				color: $site-color__secondary;
+			}
+		}
+		.username {
+			color: $site-color__body--light;
+		}
+		.delete-user {
+			a {
+				margin-left: 5px;
+				font-weight: 700;
+				font-size: 12px;
+				padding: 4px;
+				border-radius: 4px;
+				text-transform: uppercase;
+				background-color: $site-color__red;
+				color: $site-color__white;
+				&:hover {
+					background-color: darken($site-color__red, 10%);
+				}
+			}
+		}
+	}
+	p {
+		color: $site-color__body--light;
+		font-weight: 500;
+		margin-top: 5px;
+	}
+}
+
+

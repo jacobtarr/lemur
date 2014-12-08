@@ -1,0 +1,39 @@
+// -----------------------------
+// Forgot and Reset Password Section
+// -----------------------------
+
+.forgot-password-section,
+.reset-password-section {
+	@include content-layout(640px);
+	margin-top: 50px;
+}
+
+.forgot-password-section__heading,
+.reset-password-section__heading {
+	@include session-form-heading();
+	span {
+		display: block;
+		color: $site-color__secondary;
+		margin-top: 10px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+
+.forgot-password-section__form,
+.reset-password-section__form {
+	@include session-form-elements();
+	margin-top: 40px;
+}
+
+.forgot-password-section__form--group,
+.reset-password-section__form--group {
+	@extend %form-group;
+}
+
+
+
+
+
+
+

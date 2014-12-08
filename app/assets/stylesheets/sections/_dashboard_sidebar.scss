@@ -1,0 +1,160 @@
+// -----------------------------
+// Dashboard -- Sidebar
+// -----------------------------
+
+.dashboard {
+	@include content-layout(1000px);
+	padding-top: 20px;
+	@include display(flex);
+	@media (max-width: $site-screen__ipad--portrait) {
+		@include flex-wrap(wrap);
+	}
+}
+
+.dashboard__sidebar {
+	width: 300px;
+	margin-right: 40px;
+	> * {
+		width: 100%;
+		margin-top: 40px;
+		@include box-sizing(border-box);
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.dashboard__sidebar--avatar-section {
+	background-color: $site-color__white;
+	border-radius: 5px;
+}
+
+.avatar-top {
+	padding: 20px;
+	text-align: center;
+	h1 {
+		font-size: 32px;
+		font-weight: 600;
+	}
+	span {
+		color: $site-color__body--lighter;
+		font-weight: 600;
+	}
+	img {
+		border-radius: 10px;
+	}
+}
+
+.avatar-bottom {
+	text-align: center;
+	background-color: $site-color__primary--lighter;
+	padding: 10px;
+	color: $site-color__white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.avatar-bottom__stat {
+	display: inline-block;
+	text-align: center;
+	padding-right: 7%;
+	&:last-child {
+		padding-right: 0;
+	}
+	h2 {
+		font-size: 24px;
+		font-weight: 600;
+	}
+	span {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+.dashboard__sidebar--follow-btn {
+	// None for now
+}
+
+.dashboard__sidebar--settings-menu {
+	background-color: $site-color__primary;
+	color: $site-color__white;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: 600;
+	li {
+		&:last-child {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+	a {
+		color: $site-color__white;
+		@include clearfix();
+		display: block;
+		padding: 15px;
+		border-bottom: 1px solid $site-color__primary--lighter;
+		> * {
+			display: inline-block;
+		}
+		.fa {
+			margin-right: 20px;
+			&.fa-cog {
+				color: $site-color__lightblue;
+			}
+			&.fa-exclamation-circle {
+				color: $site-color__red;
+			}
+			&.fa-question-circle {
+				color: $site-color__secondary;
+			}
+			&.fa-sign-out {
+				color: $site-color__yellow;
+			}
+			&.fa-angle-right {
+				margin-right: 0;
+				float: right;
+				font-size: 24px;
+			}
+		}
+		&.account-item {
+			&:hover {
+				background-color: $site-color__lightblue;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				.fa {
+					color: $site-color__white;
+				}
+			}
+		}
+		&.notifications-item {
+			&:hover {
+				background-color: $site-color__red;
+				.fa {
+					color: $site-color__white;
+				}
+			}
+		}
+		&.help-item {
+			&:hover {
+				background-color: $site-color__secondary;
+				.fa {
+					color: $site-color__white;
+				}
+			}
+		}
+		&.signout-item {
+			&:hover {
+				background-color: $site-color__yellow;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				.fa {
+					color: $site-color__white;
+				}
+			}
+		}
+	}
+}
+
+

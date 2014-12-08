@@ -1,0 +1,13 @@
+<% provide(:title, "Forgot Password") %>
+<section class="forgot-password-section">
+	<div class="forgot-password-section__heading">
+		<h2>Forgot Password?</h2>
+	</div>
+	<%= form_for(:password_reset, url: password_resets_path, html: { class: "forgot-password-section__form" } ) do |f| %>
+		<div class="forgot-password-section__form--group">
+			<%= f.label :email %>
+			<%= f.text_field :email, :placeholder => "name@example.com" %>
+		</div>
+		<%= f.submit "Submit", class: "btn btn__primary btn__lg" %>
+	<% end %>
+</section>
