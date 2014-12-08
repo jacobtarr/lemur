@@ -1,12 +1,14 @@
 User.create!(name:  "Jake Tarr",
-			 username: "jake",
+			       username: "jake",
              email: "jtarr.rams@gmail.com",
              password:              "zelda3",
              password_confirmation: "zelda3",
              about_me: "I'm on Lemur. Check out my profile!",
              website: "jacobtarr.github.io",
              user_location: "Erie, PA",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -23,5 +25,7 @@ User.create!(name:  "Jake Tarr",
                password_confirmation: password,
                about_me: about_me,
                website: website,
-               user_location: user_location)
+               user_location: user_location,
+               activated: true,
+               activated_at: Time.zone.now)
 end
