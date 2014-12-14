@@ -1,0 +1,20 @@
+<% provide(:title, @user.name) %>
+<% provide(:main_class_modifier, "--dashboard") %>
+<div class="dashboard">
+	<aside class="dashboard__sidebar">
+		<%= render 'shared/dashboard/user_info' %>
+		<%= render 'follow_form' if logged_in? %>
+		<%= render 'shared/dashboard/user_vitals' %>
+	</aside>
+	<section class="dashboard__content">
+		<%= render 'show_relationships' %>
+	</section>
+</div>
+
+
+
+
+
+
+
+

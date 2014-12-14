@@ -24,6 +24,17 @@
 	#account-vitals {
 		margin-top: 40px;
 	}
+	.input-group.where {
+		margin-right: auto;
+		width: 100%;
+		.input-group {
+			width: 100%;
+			margin-right: 20px;
+		}
+		.btn {
+			width: auto;
+		}
+	}
 }
 
 .signup-form__form--group {

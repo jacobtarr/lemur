@@ -1,0 +1,14 @@
+<div class="dashboard__content--feed-section">
+	<div class="pagelet">
+		<div class="pagelet__header">
+			<i class="fa fa-rss"></i><%= @user.username %>'s Feed</div>
+		<div class="pagelet__body">
+		    <% if @user.microposts.any? %>
+		    	<ul class="posts-list">
+		        	<%= render @user.microposts %>
+		      	</ul>
+		      	<%= will_paginate @microposts %>
+		    <% end %>
+		</div>
+	</div>
+</div>

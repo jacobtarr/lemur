@@ -1,0 +1,23 @@
+<li class="post" id="post-<%= micropost.id %>">
+	<div class="post__avatar">
+		<%= link_to gravatar_for(micropost.user, size: 100), micropost.user %>
+		<span><%= link_to at_username micropost.user %></span>
+	</div>
+	<article class="post__content">
+		<h6><%= micropost.headline %></h6>
+		<p><%= micropost.content %></p>
+	</article>
+	<ul class="post__meta-info">
+		<li><i class="fa fa-clock-o"></i><%= time_ago_in_words(micropost.created_at) %> ago</li>
+		<li><i class="fa fa-calendar-o"></i><%= I18n.l micropost.date, :format => :default %></li>
+		<li><i class="fa fa-map-marker"></i><%= micropost.location %></li>
+		<li class="post__meta-info--delete">
+		<% if current_user?(micropost.user) %>
+	    	<%= link_to '<i class="fa fa-trash-o"></i>Delete'.html_safe, micropost, method: :delete,
+	                                       	 data: { confirm: "You sure?" } %>
+	    <% end %>
+		</li>
+	</ul>
+</li>
+
+

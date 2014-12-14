@@ -2,7 +2,7 @@
 	<div class="site-header-content">
 		<div class="site-header-content__nav">
 			<figure class="site-header-content__nav--logo">
-				<%= link_to image_tag("global/logo.png", alt: "Lemur") %>
+				<%= link_to image_tag("global/logo.png", alt: "Lemur"), root_path %>
 				<figcaption><%= link_to "Lemur",   root_path %></figcaption>
 			</figure>
 			<input type="checkbox" id="toggle" />
@@ -10,6 +10,7 @@
 				<label for="toggle" class="toggle" data-open="&#xf0c9;" data-close="&#xf00d;" onclick></label>
 				<ul>
 					<% if logged_in? %>
+						<li><%= link_to "Post", root_path %></li>
 						<li><%= link_to "Users", users_path %></li>
 						<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
 					<% else %>

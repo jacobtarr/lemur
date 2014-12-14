@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+  will_paginate:
+    previous_label: ""
+    next_label: ""
+  date:
+    formats:
+      default: "%e %b %Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one:   "1 min"
+        other: "%{count} mins"
+      about_x_hours:
+        one: "1 hr"
+        other: "%{count} hrs"

@@ -1,7 +1,21 @@
 <% provide(:title, "Home") %>
-<% provide(:main_class_modifier, "--homepage") %>
-<%= render 'static_pages/home/home_features' %>
-<%= render 'static_pages/home/home_newsletter' %>
+<% if logged_in? %>
+	<% provide(:main_class_modifier, "--dashboard") %>
+	<div class="dashboard">
+		<aside class="dashboard__sidebar">
+			<%= render 'shared/dashboard/current_user_info' %>
+			<%= render 'shared/dashboard/account_settings' %>
+		</aside>
+		<section class="dashboard__content">
+			<%= render 'shared/dashboard/post_widget' %>
+			<%= render 'shared/dashboard/feed' %>
+		</section>
+	</div>
+<% else %>
+	<% provide(:main_class_modifier, "--homepage") %>
+	<%= render 'static_pages/home/home_features' %>
+	<%= render 'static_pages/home/home_newsletter' %>
+<% end %>
 
 
 

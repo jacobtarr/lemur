@@ -19,8 +19,23 @@
 		color: $site-color__body--light;
 		@include clearfix();
 	}
-	.character-count {
+	input[type="date"] {
+		padding: 10px;
+	}
+	#char-count__headline,
+	#char-count__content {
 		float: right;
+		color: $site-color__secondary;
+		positon: relative;
+		&::after {
+			content: ' char. left';
+			postion: absolute;
+			top: 0;
+			right: 0;
+		}
+		&.char-count--danger {
+			color: $site-color__red;
+		}
 	}
 }
 
@@ -40,9 +55,6 @@
 	margin-top: 10px;
 	width: 100%;
 }
-
-
-
 
 
 

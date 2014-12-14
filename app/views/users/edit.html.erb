@@ -1,9 +1,11 @@
 <% provide(:title, "Edit account") %>
 <% provide(:main_class_modifier, "--dashboard") %>
 <div class="dashboard">
-	<%= render 'shared/dashboard_sidebar' %>
+	<aside class="dashboard__sidebar">
+		<%= render 'shared/dashboard/user_info' %>
+	</aside>
 	<section class="dashboard__content">
-		<%= render 'shared/dashboard_settings' %>
+		<%= render 'shared/dashboard/settings' %>
 	</section>
 </div>
 

@@ -1,0 +1,24 @@
+<div class="dashboard__sidebar--avatar-section">
+	<div class="avatar-top">
+		<%= link_to gravatar_for(@user, size: 120), @user %>
+		<h1><%= @user.name %></h1>
+		<span><%= at_username @user %></span>
+	</div>
+	<div class="avatar-bottom">
+		<%= link_to(@user, class: "avatar-bottom__stat") do %>
+			<% if @user.microposts.any? %>
+				<h2><%= @user.microposts.count %></h2>
+			<% end %>
+			<span>posts</span>
+		<% end %>
+		<% @user ||= current_user %>
+		<a href="<%= following_user_path(@user) %>" class="avatar-bottom__stat">
+			<h2 id="following"><%= @user.following.count %></h2>
+			<span>following</span>
+		</a>
+		<a href="<%= followers_user_path(@user) %>" class="avatar-bottom__stat">
+			<h2 id="followers"><%= @user.followers.count %></h2>
+			<span>followers</span>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="dashboard__sidebar--vitals">
+	<div class="pagelet">
+		<div class="pagelet__header"><i class="fa fa-heart"></i><%= @user.username %>'s Vitals</div>
+		<div class="pagelet__body">
+			<% if @user.user_location %>
+				<div class="vitals-item">
+					<h6>Location</h6>
+					<span><%= @user.user_location %></span>
+				</div>
+			<% end %>
+			<% if @user.about_me %>
+				<div class="vitals-item">
+					<h6>About Me</h6>
+					<span><%= @user.about_me %></span>
+				</div>
+			<% end %>
+			<% if @user.website %>
+				<div class="vitals-item">
+					<h6>Website</h6>
+					<span><%= @user.website %></span>
+				</div>
+			<% end %>
+			<div class="vitals-item">
+				<h6>Joined</h6>
+				<span><%= (@user.created_at).strftime("%d %b %Y") %></span>
+			</div>
+		</div>
+	</div>
+</div>

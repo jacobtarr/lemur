@@ -1,0 +1,33 @@
+<div class="dashboard__content--post-section">
+	<div class="pagelet">
+		<div class="pagelet__header"><i class="fa fa-pencil"></i>Post</div>
+		<div class="pagelet__body">
+			<%= form_for @micropost, html: { class: "post-section__form" } do |f| %>
+				<%= render 'shared/error_messages', object: f.object %>
+				<div class="post-section__form--group">
+					<script>window.onbeforeunload = charCount();</script>
+					<%= f.label :headline, 'Headline<span id="char-count__headline"></span>'.html_safe %>
+					<%= f.text_field :headline %>
+				</div>
+				<div class="post-section__form--group">
+					<div class="input-group">
+						<%= f.label :date, "When?" %>
+						<%= f.date_field :date %>
+					</div>
+					<div class="input-group where">
+						<div class="input-group">
+							<%= f.label :location, "Where?" %>
+							<%= f.text_field :location %>
+						</div>
+						<a href="" class="btn btn__info"><i class="fa fa-map-marker"></i></a>
+					</div>
+				</div>
+				<div class="post-section__form--group">
+					<%= f.label :content, 'Your Story<span id="char-count__content"></span>'.html_safe %>
+					<%= f.text_area :content, :rows => "3" %>
+				</div>
+				<%= f.submit "Post", class: "btn btn__primary btn__lg btn__post" %>
+			<% end %>
+		</div>
+	</div>
+</div>

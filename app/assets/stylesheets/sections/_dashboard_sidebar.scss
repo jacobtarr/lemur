@@ -58,6 +58,7 @@
 	display: inline-block;
 	text-align: center;
 	padding-right: 7%;
+	color: $site-color__white;
 	&:last-child {
 		padding-right: 0;
 	}
@@ -70,10 +71,13 @@
 		font-size: 14px;
 		font-weight: 600;
 	}
+	&:hover {
+		color: $site-color__primary;
+	}
 }
 
 .dashboard__sidebar--follow-btn {
-	// None for now
+	width: 100%;
 }
 
 .dashboard__sidebar--settings-menu {
@@ -156,5 +160,27 @@
 		}
 	}
 }
+
+.dashboard__sidebar--vitals {
+	h6 {
+		font-size: 18px;
+	}
+	.vitals-item {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			color: $site-color__body--light;
+		}
+	}
+}
+
+
+
+
+
+
+
 
 

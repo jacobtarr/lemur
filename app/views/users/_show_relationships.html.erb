@@ -1,0 +1,14 @@
+<div class="dashboard__content--relationships">
+	<div class="pagelet">
+		<div class="pagelet__header"><i class="fa fa-users"></i><%= @title %></div>
+		<div class="pagelet__body">
+			<% if @users.any? %>
+				<%= will_paginate %>
+				<ul class="users-list">
+					<%= render @users %>
+				</ul>
+				<%= will_paginate %>
+			<% end %>
+		</div>
+	</div>
+</div>

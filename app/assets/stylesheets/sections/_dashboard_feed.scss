@@ -1,0 +1,94 @@
+// -----------------------------
+// Dashboard -- Feed
+// -----------------------------
+
+.dashboard__content--feed-section {
+	.pagelet__body {
+		padding-top: 0;
+	}
+}
+
+.post {
+	@include display(flex);
+	border-bottom: 1px solid #e7e7e7;
+	padding: 15px 20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	.gravatar {
+		border-radius: 5px;
+		vertical-align: middle;
+	}
+}
+
+.post__avatar {
+	max-width: 100px;
+	width: 100%;
+	span {
+		display: block;
+		margin-top: 7px;
+		font-size: 16px;
+		text-align: center;
+		font-weight: 600;
+		color: $site-color__body--lighter;
+		a {
+			color: $site-color__body;
+			&:hover {
+				color: $site-color__secondary;
+			}
+		}
+	}
+}
+
+.post__content {
+	max-width: 340px;
+	width: 100%;
+	@include box-sizing(border-box);
+	margin-left: 20px;
+	padding-right: 20px;
+	border-right: 1px solid #e7e7e7;
+	h6 {
+		font-size: 16px;
+	}
+	p {
+		margin: 0;
+		color: $site-color__body--light;
+	}
+}
+
+.post__meta-info {
+	margin-left: 20px;
+	font-size: 16px;
+	color: $site-color__body--lighter;
+	.fa {
+		min-width: 25px;
+	}
+	.btn__danger {
+		font-size: 12px;
+		padding: 10px;
+		text-transform: uppercase;
+		.fa {
+			min-width: inherit;
+			margin-right: 5px;
+		}
+	}
+}
+
+.post__meta-info--delete {
+	a {
+		color: $site-color__red;
+		&:hover {
+			color: darken($site-color__red, 10%);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

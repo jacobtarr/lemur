@@ -1,18 +1,13 @@
 <% provide(:title, 'Browse Users') %>
 <% provide(:main_class_modifier, "--dashboard") %>
 <div class="dashboard">
-	<%= render 'shared/dashboard_sidebar' %>
+	<aside class="dashboard__sidebar">
+		<%= render 'shared/dashboard/user_info' %>
+	</aside>
 	<section class="dashboard__content">
 		<div class="dashboard__content--users">
 			<div class="pagelet">
 				<div class="pagelet__header"><i class="fa fa-users"></i>Browse Users</div>
-				<script>
-					// Remove text from pagination nodes
-					$(function removePaginationText() {
-						var prevPage = $('.previous_page').empty();
-						var nextPage = $('.next_page').empty();
-					});
-				</script>
 				<div class="pagelet__body">
 					<%= will_paginate %>
 					<ul class="users-list">

@@ -5,18 +5,17 @@
 		<span>It only takes a few moments!</span>
 	</div>
 	<%= form_for @user, html: { class: "signup-form__form" } do |f| %>
-	<%= render 'shared/error_messages' %>
+	<%= render 'shared/error_messages', object: f.object %>
 		<div id="account-info">
 			<h3><i class="fa fa-info-circle"></i>Account Info</h3>
 			<div class="signup-form__form--group">
-				<div class="input-group">
-					<%= f.label :name %>
-					<%= f.text_field :name, :placeholder => "Full Name" %>
-				</div>
-				<div class="input-group">
-					<%= f.label :username %>
-					<%= f.text_field :username %>
-				</div>
+				<%= f.label :name %>
+				<%= f.text_field :name, :placeholder => "Full Name" %>
+			</div>	
+			<div class="signup-form__form--group">	
+				<%= f.label :username %>
+				<%= f.text_field :username, :placeholder => "only numbers and letters; can't exceed 20 characters" %>
+			</div>
 			</div>
 			<div class="signup-form__form--group">
 				<%= f.label :email %>
@@ -36,8 +35,13 @@
 		<div id="account-vitals">
 			<h3><i class="fa fa-list-alt"></i>Vitals</h3>
 			<div class="signup-form__form--group">
-				<%= f.label :user_location, "Where are you?" %>
-				<%= f.text_field :user_location %>
+				<div class="input-group where">
+					<div class="input-group">
+						<%= f.label :user_location, "Where are you?" %>
+						<%= f.text_field :user_location, :placeholder => "Erie, PA" %>
+					</div>
+					<a href="" class="btn btn__info"><i class="fa fa-map-marker"></i></a>
+				</div>
 			</div>
 			<div class="signup-form__form--group">
 				<%= f.label :about_me, "About Me" %>
@@ -45,7 +49,7 @@
 			</div>
 			<div class="signup-form__form--group">
 				<%= f.label :website, "Your Website" %>
-				<%= f.text_field :website %>
+				<%= f.text_field :website, :placeholder => "example.com" %>
 			</div>
 		</div>
 		<p>By clicking "Create Account," you agree to the <%= link_to "terms", terms_path, :target => '_blank' %> of Lemur.</p>

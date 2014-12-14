@@ -3,7 +3,7 @@
 		<div class="pagelet__header"><i class="fa fa-cog"></i>Update Account</div>
 		<div class="pagelet__body">
 			<%= form_for @user, html: { class: "settings-form" } do |f| %>
-			<%= render 'shared/error_messages' %>
+			<%= render 'shared/error_messages', object: f.object %>
 				<div class="settings-form__section first">
 					<h3><i class="fa fa-user"></i>Edit Account Credentials</h3>
 					<div class="settings-form__section--group">
@@ -55,13 +55,14 @@
 					</div>
 				</div>
 				 <%= f.submit "Submit Changes", class: "btn btn__submit btn__lg btn__primary" %>
+				 <div class="settings-form__section">
+					 <h3><i class="fa fa-picture-o"></i>Change Profile Picture</h3>
+					 <div class="settings-form__section--gravatar">
+						<%= gravatar_for @user, size: "80" %>
+						<a class="btn btn__info" href="http://gravatar.com/emails" target=_blank>Change</a>
+					</div>
+				</div>
 			<% end %>
-
-			<!-- <div class="gravatar_edit">
-				<%= gravatar_for @user %>
-				<a href="http://gravatar.com/emails" target=_blank>change</a>
-			</div> -->
-
 		</div>
 	</div>
 </div>

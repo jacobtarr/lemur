@@ -1,3 +1,4 @@
+# Users
 User.create!(name:  "Jake Tarr",
 			       username: "jake",
              email: "jtarr.rams@gmail.com",
@@ -29,3 +30,31 @@ User.create!(name:  "Jake Tarr",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+# Microposts
+users = User.order(:created_at).take(6)
+50.times do
+  headline = Faker::Lorem.word
+  date = Faker::Date.backward(14)
+  location = Faker::Address.city
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(headline: headline,
+                                              date: date,
+                                              location: location,
+                                              content: content) 
+  }
+end
+
+# Following Relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
+
+
+
+
+
+
