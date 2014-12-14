@@ -2,7 +2,7 @@
 	<div class="pagelet">
 		<div class="pagelet__header"><i class="fa fa-pencil"></i>Post</div>
 		<div class="pagelet__body">
-			<%= form_for @micropost, html: { class: "post-section__form" } do |f| %>
+			<%= form_for @micropost, html: { class: "post-section__form" }, remote: true do |f| %>
 				<%= render 'shared/error_messages', object: f.object %>
 				<div class="post-section__form--group">
 					<script>window.onbeforeunload = charCount();</script>

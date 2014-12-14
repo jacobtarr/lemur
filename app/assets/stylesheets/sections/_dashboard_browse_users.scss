@@ -37,10 +37,9 @@
 
 .users-list {
 	.gravatar {
-		display: inline-block;
-		vertical-align: middle;
 		border-radius: 5px;
-		margin-right: -4px;
+		min-width: 80px;
+		max-height: 80px;
 	}
 }
 
@@ -49,6 +48,7 @@
 	padding: 15px 20px;
 	margin-left: -20px;
 	margin-right: -20px;
+	@include display(flex);
 	.users-list & {
 		&:first-child {
 			border-top: 1px solid #e7e7e7;
@@ -57,10 +57,7 @@
 }
 
 .users-list__user--content {
-	display: inline-block;
-	vertical-align: top;
 	margin-left: 10px;
-	max-width: 530px;
 	header {
 		font-size: 18px;
 		line-height: 1;

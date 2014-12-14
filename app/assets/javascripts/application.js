@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
+//= require sync
 //= require_tree ./vendor
 //= require_tree .

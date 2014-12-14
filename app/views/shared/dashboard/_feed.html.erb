@@ -2,14 +2,13 @@
 	<div class="pagelet">
 		<div class="pagelet__header"><i class="fa fa-rss"></i>Your Feed</div>
 		<div class="pagelet__body">
-			<div class="something-for-now">
-			    <% if @feed_items.any? %>
-				  <ol class="microposts">
-				    <%= render @feed_items %>
-				  </ol>
-				  <%= will_paginate @feed_items %>
-				<% end %>
-			  </div>
+		    <% if @feed_items.any? %>
+			  	<ul class="posts-list">
+			    	<%= sync partial: 'micropost', collection: @feed_items %>
+			   		<%= sync_new partial: 'micropost', resource: Micropost.new %>
+			  	</ul>
+			  <%= will_paginate @feed_items %>
+			<% end %>
 		</div>
 	</div>
 </div>

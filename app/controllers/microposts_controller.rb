@@ -9,8 +9,8 @@ class MicropostsController < ApplicationController
 	def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
+      sync_new @micropost
       flash[:success] = "Your post has been published!"
-      redirect_to root_url
     else
       @feed_items = []
       render 'static_pages/home'
@@ -19,6 +19,7 @@ class MicropostsController < ApplicationController
 
 	def destroy
     @micropost.destroy
+    sync_destroy @micropost
     flash[:success] = "Post deleted"
     redirect_to request.referrer || root_url
   end
