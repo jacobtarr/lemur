@@ -13,11 +13,10 @@
 		<li><i class="fa fa-map-marker"></i><%= micropost.location %></li>
 		<li class="post__meta-info--delete">
 		<% if current_user?(micropost.user) %>
-	    	<%= link_to '<i class="fa fa-trash-o"></i>Delete'.html_safe, micropost, remote: true, method: :delete,
+	    	<%= link_to '<i class="fa fa-trash-o"></i>Delete'.html_safe, micropost, method: :delete,
 	                                       	 data: { confirm: "You sure?" } %>
 	    <% end %>
 		</li>
 	</ul>
 </li>
-
 

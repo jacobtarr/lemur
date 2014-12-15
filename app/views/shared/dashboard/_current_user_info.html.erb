@@ -5,9 +5,9 @@
 		<span><%= at_username current_user %></span>
 	</div>
 	<div class="avatar-bottom">
-		<%= link_to(@user, class: "avatar-bottom__stat") do %>
-			<% if @user.microposts.any? %>
-				<h2><%= @user.microposts.count %></h2>
+		<%= link_to(current_user, class: "avatar-bottom__stat") do %>
+			<% if current_user.microposts.any? %>
+				<h2><%= current_user.microposts.count %></h2>
 			<% end %>
 			<span>posts</span>
 		<% end %>

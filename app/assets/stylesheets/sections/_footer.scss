@@ -1,0 +1,65 @@
+// -----------------------------
+// Footer
+// -----------------------------
+
+@include sticky-footer(230px, "main", ".site-footer-push", ".site-footer");
+
+.site-footer {
+	margin-top: 230px;
+	background-color: $site-color__primary;
+}
+
+.site-footer-content {
+	@include content-layout($site-width__main);
+	@include display(flex);
+	@include align-items(top);
+	@include justify-content(space-between);
+	padding: 50px 0;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+.site-footer-content__column {
+	a {
+		color: $site-color__secondary;
+		font-size: 18px;
+		&:hover {
+			color: $site-color__primary--lighter;
+			@include transition(0.2s ease-in);
+		}
+		.fa {
+			width: 30px;
+		}
+	}
+	h5 {
+		color: $site-color__secondary;
+		margin-bottom: 20px;
+	}
+}
+
+.site-footer-content__column--logo {
+	margin: 0;
+	a {
+		font-weight: 700;
+	}
+	figcaption {
+		a {
+			font-size: 28px;
+		}
+		line-height: 1;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

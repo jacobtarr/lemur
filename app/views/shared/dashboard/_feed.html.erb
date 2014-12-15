@@ -4,8 +4,8 @@
 		<div class="pagelet__body">
 		    <% if @feed_items.any? %>
 			  	<ul class="posts-list">
-			    	<%= sync partial: 'micropost', collection: @feed_items %>
-			   		<%= sync_new partial: 'micropost', resource: Micropost.new %>
+			  		<%# sync_new partial: 'micropost', resource: @micropost, scope: @feed_items %>
+			  		<%= render @feed_items %>
 			  	</ul>
 			  <%= will_paginate @feed_items %>
 			<% end %>

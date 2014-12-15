@@ -2,6 +2,8 @@ class MicropostsController < ApplicationController
 	before_action :logged_in_user, only: [:show, :create, :destroy]
   before_action :correct_user,   only: :destroy
 
+  enable_sync
+
 	def show
     @micropost = Micropost.find(params[:id])
 	end
@@ -10,7 +12,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       sync_new @micropost
-      flash[:success] = "Your post has been published!"
+      flash[:success] = "Post created!"
     else
       @feed_items = []
       render 'static_pages/home'
@@ -19,7 +21,6 @@ class MicropostsController < ApplicationController
 
 	def destroy
     @micropost.destroy
-    sync_destroy @micropost
     flash[:success] = "Post deleted"
     redirect_to request.referrer || root_url
   end
