@@ -1,28 +1,18 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Lemur
+A basic social network Rails application that demonstrates fundamental CRUD principles. Users can sign up, post status updates and follow their friends, much like Twitter or Facebook.
+### How to install this project
+Clone the repository to your local machine
+```sh
+cd apps
+git clone https://github.com/jacobtarr/lemur.git
+cd lemur
+```
+Install the necessary dependencies for Rails
+```sh
+bundle install --without production
+bundle exec rake db:migrate
+```
+Start the server
+```sh
+rails s
+```
